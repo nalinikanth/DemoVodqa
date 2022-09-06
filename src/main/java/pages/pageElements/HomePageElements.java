@@ -6,9 +6,10 @@ import utils.WebElementUtils;
 
 public class HomePageElements extends WebElementUtils {
 
-    @FindBy(css="h4.cb-mdl-hdr")
-    protected WebElement title;
+    @FindBy(xpath="/html/body/div[1]/div/div[2]/div[1]/div/input")
+    protected WebElement search;
 
-    @FindBy(id="live-scores-link")
-    protected WebElement link;
+    @FindBy(xpath = "//body/div[@id='header']/div/div/div/div/div/a[1]/div[1]/img[1]")
+    protected WebElement firstElement;
+
 }

@@ -15,15 +15,19 @@ public class HomePage extends HomePageElements {
         PageFactory.initElements(driver, this);
     }
 
-    public LoginPage clickMatchlink(){
-        click(driver, link);
-        return new LoginPage(driver);
-
-
+    public WebDriver searchApp(String searchString) throws InterruptedException {
+        click(driver, search);
+//        enterText(search,searchString);
+        search.sendKeys("u");
+        search.sendKeys("s");
+        search.sendKeys("e");
+        search.sendKeys("r");
+        Thread.sleep(2000);
+        firstElement.click();
+        Thread.sleep(1000);
+        return driver;
     }
 
-    public String getHeadingText(){
-        return title.getText();
-    }
+
 
 }

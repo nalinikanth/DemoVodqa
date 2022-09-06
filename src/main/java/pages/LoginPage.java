@@ -15,11 +15,11 @@ public class LoginPage extends LocalPageElements {
         PageFactory.initElements(driver, this);
     }
 
-    public WebDriver login(String name, String passwordText){
+    public HomePage login(String name, String passwordText){
         enterText(userName,name);
         enterText(password,passwordText);
         submit.click();
-        return driver;
+        return new HomePage(driver);
     }
 
 }
